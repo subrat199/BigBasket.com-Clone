@@ -69,23 +69,24 @@ let arr=[{
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 ]
+console.log(arr)
 
-function displaycard(arr)
+function dis(data)
 {
-    arr.forEach((el)=>{
+    data.forEach(function(el){
         let div=document.createElement("div")
         let image=document.createElement("img")
         image.src=el.img;
-        let Tag=document.createElement("p")
-        Tag.innerText=el.tag;
+        let tag=document.createElement("p")
+        tag.innerText=el.tag;
         let name=document.createElement("p")
         name.innerText=el.name;
         let pr=document.createElement("p")
-        pr.innerText=el.price
+        pr.innerText=el.price;
         let des=document.createElement("p")
-        des.innerText=el.description;
-        div.append(image,Tag,name,pr,des)
+        des.innerText=el.description
+        div.append(image,tag,name,pr,des)
         document.querySelector(".veg").append(div)
     })
 }
-displaycard(arr)
+dis(arr)
