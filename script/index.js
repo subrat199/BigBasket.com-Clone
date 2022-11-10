@@ -69,7 +69,7 @@ let arr=[{
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 ]
-displaycard(arr)
+
 function displaycard(arr)
 {
     arr.forEach((el)=>{
@@ -88,3 +88,4 @@ function displaycard(arr)
         document.querySelector(".veg").append(div)
     })
 }
+displaycard(arr)
