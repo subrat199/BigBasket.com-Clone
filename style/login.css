@@ -1,0 +1,48 @@
+.login
+{
+    height: 300px;
+    width: 50%;
+    border: 1px solid white;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.login>h2
+{
+    color: lightgreen;
+}
+.email
+{
+    height: 70px;
+    width:50%;
+    border: 1px solid grey;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+    
+}
+.login>.email>p{
+    text-align: center;
+    padding-top: 20px;
+    margin: auto;
+    border: 1px solid grey;
+}
+.cont
+{
+    height:40px;
+    width: 50%;
+    border: 1px solid white;
+    margin: auto;
+    font-size: larger;
+    text-align: center;
+    margin-top: 20px;
+    background-color: lightseagreen;
+    color: white;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+p
+{
+    color: blue;
+}
