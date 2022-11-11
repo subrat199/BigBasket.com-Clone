@@ -1,4 +1,4 @@
-let arr=[{
+let show=[{
     img:"https://www.bigbasket.com/media/uploads/p/s/10000069_20-fresho-capsicum-green.jpg",
     tag:"Fresho",
     name:"Capsicum - Green (Loose)",
@@ -68,41 +68,6 @@ let arr=[{
     price:" 27",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
-]
-console.log(arr)
-let arr4=JSON.parse(localStorage.getItem("add to cart"))||[]
-function dis(data)
-{
-    data.forEach(function(el){
-        let div=document.createElement("div")
-        let image=document.createElement("img")
-        image.src=el.img;
-        let tag=document.createElement("p")
-        tag.innerText=el.tag;
-        let name=document.createElement("p")
-        name.innerText=el.name;
-        let pr=document.createElement("p")
-        pr.innerText="Mrp:Rs"+el.price;
-        let des=document.createElement("p")
-        des.innerText=el.description
-        let sp=document.createElement("span")
-        sp.innerText="Qua"
-        let inp=document.createElement("input")
-        inp.type="number"
-        let but=document.createElement("button")
-        but.innerText="Add to cart"
-        but.setAttribute("class","butt1")
-        but.addEventListener("click",function(){
-            arr4.push(el)
-            localStorage.setItem("add to cart",JSON.stringify(arr4))
-        })
-        div.append(image,tag,name,pr,des,sp,inp,but)
-        document.querySelector(".veg").append(div)
-    })
-}
-dis(arr)
-let bestseller=
-[
 {
     img:"https://www.bigbasket.com/media/uploads/p/s/40216129_10-fresho-tender-coconut-water-no-added-sugar-flavours.jpg",
     tag:"Fresho",
@@ -174,10 +139,10 @@ let bestseller=
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 ]
-let arr3=JSON.parse(localStorage.getItem("add to cart"))||[]
-function best(data)
+let smore=[]
+function displaycard(show)
 {
-    data.forEach((el)=>{
+    show.forEach((el)=>{
         let div=document.createElement("div")
         let image=document.createElement("img")
         image.src=el.img;
@@ -195,14 +160,14 @@ function best(data)
         inp.type="number"
         let but=document.createElement("button")
         but.innerText="Add to cart"
-        but.setAttribute("class","butt")
-        but.addEventListener("click",function(){
-            arr3.push(el)
-           
-            localStorage.setItem("add to cart",JSON.stringify(arr3))
+        but.setAttribute("class","butt1")
+        but.addEventListener("click",function()
+        {
+            smore.push(el)
+            localStorage.setItem("add to cart",JSON.stringify(smore))
         })
         div.append(image,tag,name,pr,des,sp,inp,but)
-        document.querySelector(".item").append(div)
+        document.querySelector(".showmore").append(div)
     })
 }
-best(bestseller)
+displaycard(show)
