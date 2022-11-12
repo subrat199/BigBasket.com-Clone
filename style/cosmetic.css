@@ -1,5 +1,11 @@
-.vegitable
+.cosmetic
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    text-align: center;
+}
+.cosmetic>div
+{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
