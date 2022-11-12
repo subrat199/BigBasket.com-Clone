@@ -1,4 +1,4 @@
-document.querySelector(".cont").addEventListener("click",myfun)
+document.querySelector(".cont").addEventListener("click",myfun())
 let arr1=JSON.parse(localStorage.getItem("mobileno"))||[]
 function myfun(e)
 {

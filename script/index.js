@@ -248,3 +248,6 @@ document.querySelector("#shopby").addEventListener("change",function(){
         window.location.href="./cosmetic.html"
     }
 })
+document.querySelector(".se").addEventListener("change",function(){
+    console.log("hi")
+})
