@@ -24,6 +24,7 @@ function display(arr5)
         let addtobag=document.createElement("button")
         addtobag.innerText="+";
         let count=0;
+        let total;
         addtobag.addEventListener("click",function(){
             count++;
             // console.log(el.price)
@@ -44,9 +45,9 @@ function display(arr5)
             if(count>=0)
             {
                 inp.value=count
-                bag=(+(el.price)*count)
-                bag=total-(+(el.price)*count)
-               document.querySelector("h1").innerText=bag
+                bag=(+(el.price))
+                total=total-(bag)
+               document.querySelector("h1").innerText=total
             }
             else{
                 document.querySelector("h1").innerText="0"

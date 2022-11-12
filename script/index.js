@@ -3,6 +3,7 @@ let arr=[{
     tag:"Fresho",
     name:"Capsicum - Green (Loose)",
     price:"41",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -10,6 +11,7 @@ let arr=[{
     tag:"Fresho",
     name:"Carrot - Orange (Loose)",
     price:"75",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -17,6 +19,7 @@ let arr=[{
     tag:"Fresho",
     name:"Coriander Leaves",
     price:"8.50",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -24,6 +27,7 @@ let arr=[{
     tag:"Fresho",
     name:"Cucumber (Loose)",
     price:"18.50",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -31,6 +35,7 @@ let arr=[{
     tag:"Fresho",
     name:"Ladies' Fingers (Loose)",
     price:"19.75",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -38,6 +43,7 @@ let arr=[{
     tag:"Fresho",
     name:"Onion (Loose)",
     price:"44",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -45,6 +51,7 @@ let arr=[{
     tag:"Fresho",
     name:"Tomato - Hybrid (Loose)",
     price:" 19.50",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -52,6 +59,7 @@ let arr=[{
     tag:"Fresho",
     name:"Tomato -Local (Loose)",
     price:" 19.50",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -59,6 +67,7 @@ let arr=[{
     tag:"Fresho",
     name:"POTATO (Loose)",
     price:"47",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -66,15 +75,22 @@ let arr=[{
     tag:"Fresho",
     name:"Beans - Haricot (Loose)",
     price:" 27",
+    catagory:"vegitable",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 ]
-console.log(arr)
+let prdetails=[]
+// console.log(arr)
 let arr4=JSON.parse(localStorage.getItem("add to cart"))||[]
 function dis(data)
 {
     data.forEach(function(el){
         let div=document.createElement("div")
+        div.addEventListener("click",function(){
+            prdetails.push(el)
+            localStorage.setItem("productdetails",JSON.stringify(prdetails))
+            window.location.href="./productdetails.html"
+        })
         let image=document.createElement("img")
         image.src=el.img;
         let tag=document.createElement("p")
@@ -108,6 +124,7 @@ let bestseller=
     tag:"Fresho",
     name:"Tender Coconut Water - No Added Sugar, Flavours",
     price:"27",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -115,6 +132,7 @@ let bestseller=
     tag:"Fresho",
     name:"Frozen Green Peas",
     price:" 159",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -122,6 +140,7 @@ let bestseller=
     tag:"Fresho",
     name:"Rose Face Powder - Sunscreen",
     price:"138.75",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -129,6 +148,7 @@ let bestseller=
     tag:"Fresho",
     name:"Cumin/Jeera/Jeerige - Whole",
     price:"44",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -136,6 +156,7 @@ let bestseller=
     tag:"Fresho",
     name:"Perfecting Liquid Foundation",
     price:"127.50",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -143,6 +164,7 @@ let bestseller=
     tag:"Fresho",
     name:"Carbon Zinc Battery Red HD AA 1015",
     price:"129",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -150,6 +172,7 @@ let bestseller=
     tag:"Fresho",
     name:"Pomegranate (Loose)",
     price:"208",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -157,6 +180,7 @@ let bestseller=
     tag:"Fresho",
     name:"Intensive Care Deep Moisture Body Lotion - Dry Skin, With Pure Oat Extract, Long Lasting Moisturization",
     price:"262.50",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -164,6 +188,7 @@ let bestseller=
     tag:"Fresho",
     name:"Fried Gram/Huri Kadale",
     price:"109",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 {
@@ -171,6 +196,7 @@ let bestseller=
     tag:"Fresho",
     name:"Ragi Sticks - Achari Masala",
     price:" 13",
+    catagory:"cosmetic",
     description:"Standard Delivery: Tomorrow 3:00PM - 7:30PM",
 },
 ]
@@ -179,6 +205,11 @@ function best(data)
 {
     data.forEach((el)=>{
         let div=document.createElement("div")
+        div.addEventListener("click",function(){
+            prdetails.push(el)
+            localStorage.setItem("productdetails",JSON.stringify(prdetails))
+            window.location.href="./productdetails.html"
+        })
         let image=document.createElement("img")
         image.src=el.img;
         let tag=document.createElement("p")
@@ -206,3 +237,14 @@ function best(data)
     })
 }
 best(bestseller)
+document.querySelector("#shopby").addEventListener("change",function(){
+    let c=document.querySelector("#shopby").value;
+    if(c=="vegitable")
+    {
+        window.location.href="./veg.html"
+    }
+    if(c=="cosmetic")
+    {
+        window.location.href="./cosmetic.html"
+    }
+})
