@@ -1,0 +1,16 @@
+.prdetails>div
+{
+    height: auto;
+    width: 50%;
+    border: 1px solid white;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.prdetails>div>img{
+    width: 80%;
+    height: auto;
+    border: 1px solid white;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
